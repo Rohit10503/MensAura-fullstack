@@ -1,0 +1,84 @@
+footer{
+    background-color: #E3E6F3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;  
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow h4{
+    margin-bottom: 0;
+}
+
+footer .follow .icon{
+    cursor: pointer;
+}
+
+footer .install .download-row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .download-row img{
+    width: 130px;
+}
+
+footer a:hover{
+    color: red;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    
+}
+
+#maintainer p{
+    font-weight: bold;
+}
+
+.maintain p span{
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}

@@ -1,0 +1,29 @@
+#page-header.about-header{
+    background-image: url("/public/img/about/banner.png");
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
+
+#page-header{
+    /* background-image: url("img/banner/b1.jpg"); */
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
