@@ -1,1 +1,1 @@
-mensaura.netlify.app
+https://mensaura.netlify.app/
