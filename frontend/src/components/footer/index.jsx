@@ -4,8 +4,8 @@ const Footer=()=>{
     return <>
     <footer class="section-p1">
     <div class="col">
-      <img class="logo" src="img/Men's Aura-logos_transparent.png" alt=""/>
       <h4>Contact</h4>
+      <img class="logo" src="img/Men's Aura-logos_transparent.png" alt=""/>
       <p><strong>Address: </strong>Bhandup(w), Mumbai, Maharashtra 78</p>
       <p><strong>Phone: </strong>+91 8108153488 / +91 9869844160</p>
       <div class="follow">

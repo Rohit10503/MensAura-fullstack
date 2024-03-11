@@ -37,11 +37,13 @@ const Home = () => {
     return <>
         <div>
             <section id="hero">
+                <div id="show">
                 <h4>End of season sale</h4>
                 <h2>Super value deals</h2>
                 <h1>On all products</h1>
                 <p>save more with coupons & up to 70% off!</p>
                 <button ><Link id="shop-now" to="/shop">Shop Now</Link></button>
+                </div>
             </section>
 
             <Features />

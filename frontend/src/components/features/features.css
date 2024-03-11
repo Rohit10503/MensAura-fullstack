@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+    
 }
 
 #feature .fe-box{
@@ -14,6 +16,7 @@
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
+    height: 180px;
 }
 
 #feature .fe-box:hover{
@@ -55,4 +58,36 @@
 
 #feature .fe-box:nth-child(6) h6{
     background-color: #fff2e5;
+}
+
+@media (max-width: 490px) {
+
+    #feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+    padding: 0;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#feature .fe-box{
+    font-weight: 700;
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box h6{
+    font-size: 1em;
+}
+#feature .fe-box img{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+}
 }

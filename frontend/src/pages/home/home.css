@@ -203,3 +203,22 @@ a {
 #banner button:hover{
     background-color: #088178;
 }
+
+
+@media (max-width:490px) {
+    #hero{
+        background-image: url("background.jpg");
+        background-position: 60%;
+      
+        height:fit-content;
+        padding: 2em;
+        margin: 0;
+        width: 100%;
+       
+    }
+   #show{
+   
+    z-index: 2;
+   }
+    
+}
