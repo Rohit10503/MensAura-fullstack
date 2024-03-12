@@ -46,6 +46,7 @@
     display: none;
 }
 
+
 @media (max-width: 799px) {
     #navbar {
         display: flex;
@@ -110,6 +111,11 @@
 
     #header {
         padding: 10px 40px;
+    }
+
+    #bar{
+        position: relative;
+        top: -4px;
     }
 
 }

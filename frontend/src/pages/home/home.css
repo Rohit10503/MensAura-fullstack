@@ -52,8 +52,12 @@ a {
 }
 
 #product1{
+    margin: auto;
     text-align: center;
     margin-top: 0;
+}
+.product-display{
+    padding:2em;
 }
 
 #product1 h2{
@@ -216,9 +220,31 @@ a {
         width: 100%;
        
     }
+    #hero h2{
+        font-size:1.6em;
+    }
+    #hero h1{
+        font-size: 1.2em;
+    }
    #show{
    
     z-index: 2;
    }
-    
+   .item-img{
+    height: 20em;
+    object-fit:contain;
+}
+
+.product-display{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin :auto;
+}
+#product1 .pro-container{
+    justify-content: center;
+}
+#product1 h2{
+    font-size: 2em;
+}
 }

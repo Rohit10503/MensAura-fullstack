@@ -26,8 +26,6 @@ const Home = () => {
         getProduct();
     }, []);
 
-    const [count,setcount]=useState(0)
-
     // const goToVisit=()=>{
     //     navigate("/visit/"+item.id)
     // }
@@ -41,14 +39,14 @@ const Home = () => {
                 <h4>End of season sale</h4>
                 <h2>Super value deals</h2>
                 <h1>On all products</h1>
-                <p>save more with coupons & up to 70% off!</p>
+                <p>save more with coupons<p> & up to 70% off!</p></p>
                 <button ><Link id="shop-now" to="/shop">Shop Now</Link></button>
                 </div>
             </section>
 
             <Features />
 
-            <section id="product1" class="section-p1">
+            <section id="product1" class="product-display">
                 <h2>Featured Products</h2>
                 <h5 id="winter">Special Winter Collection</h5>
                 <div class="pro-container">
@@ -58,8 +56,8 @@ const Home = () => {
                                 
                                 
                             return (<>
-                                <div key={index} class="pro" >
-                                    <img src={item.img} alt="" />
+                               <Link to={"/visit/" + item._id} class="pro"> <div key={index}  >
+                                    <img  src={item.img} alt="" className="item-img" />
                                     <div class="des">
                                         <span>{item.company}</span>
                                         <h5>{item.name}</h5>
@@ -67,9 +65,9 @@ const Home = () => {
                                     </div>
                                     <div class="cart">
                                     
-                                        <Link to={"/visit/" + item._id}><Button variant="primary" >visit</Button></Link>
+                                        
                                     </div>
-                                </div>
+                                </div></Link>
                             </>
                             )
                         })
