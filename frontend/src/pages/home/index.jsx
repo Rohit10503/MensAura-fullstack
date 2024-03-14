@@ -56,7 +56,8 @@ const Home = () => {
                                 
                                 
                             return (<>
-                               <Link to={"/visit/" + item._id} class="pro"> <div key={index}  >
+                            <div class="pro">
+                               <Link to={"/visit/" + item._id} > <div key={index}  >
                                     <img  src={item.img} alt="" className="item-img" />
                                     <div class="des">
                                         <span>{item.company}</span>
@@ -68,6 +69,7 @@ const Home = () => {
                                         
                                     </div>
                                 </div></Link>
+                                </div>
                             </>
                             )
                         })
