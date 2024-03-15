@@ -263,6 +263,11 @@ a {
     min-width: 10em;
     /* background-color: #8df8f1; */
 }
+#product1 .pro :hover{
+ 
+    background-color: rgb(231, 238, 238);
+}
+
 #product1 .pro .des h5{
     color:#626262;
     font-size: 14px;

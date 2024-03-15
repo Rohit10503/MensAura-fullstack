@@ -59,7 +59,7 @@
 
 @media (max-width: 490px) {
     #prodetails {
-        
+        padding: 1.7em;
         display: flex;
         margin-top: 20px;
         flex-direction: column;
