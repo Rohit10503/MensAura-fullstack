@@ -2,10 +2,10 @@ import React from "react";
 import "./footer.css"
 const Footer=()=>{
     return <>
-    <footer class="section-p1">
+    <footer className="footer-container">
     <div class="col">
-      <img class="logo" src="img/Men's Aura-logos_transparent.png" alt=""/>
       <h4>Contact</h4>
+      {/* <img class="logo" src="img/Men's Aura-logos_transparent.png" alt=""/> */}
       <p><strong>Address: </strong>Bhandup(w), Mumbai, Maharashtra 78</p>
       <p><strong>Phone: </strong>+91 8108153488 / +91 9869844160</p>
       <div class="follow">
@@ -52,7 +52,6 @@ const Footer=()=>{
       <h4>Install App</h4>
       <p>From App Store or Google Play</p>
       <div class="download-row">
-        <img src="\components\img\pay\pay.png" alt=""/>
         <img src="img/pay/play.jpg" alt=""/>
       </div>
       <p>Secured Payment Gateway</p>
@@ -64,7 +63,7 @@ const Footer=()=>{
     </div>
 
     <div id="maintainer" class="copyright">
-      <p>Maintain and Developed by <span>Rohitkumar Pandey </span> </p>
+      <p className="inside-maintainer">Maintain and Developed by,<a target="_blank" href="https://rohit10503.github.io/sem4"> <span id="developer-name">Dev. Rohitkumar  </span></a> </p>
     </div>
 
   </footer>

@@ -1,27 +1,30 @@
 footer{
+    padding: 1em 9em;
     background-color: #E3E6F3;
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between; 
 }
 
 footer .col{
+ 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 footer .logo{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-footer h4{
+footer .col h4{
     font-size: 14px;
     padding-bottom: 20px;
     font-weight: 700;
 }
 
-footer p{
+footer .col p{
     font-size: 13px;
     margin: 0 0 8px 0;  
 }
@@ -81,4 +84,46 @@ footer .copyright{
 footer p {
     font-size: 20px;
     margin: 0 0 8px 0;
+}
+/* .section-p1{
+    padding: 40px 80px;
+  }
+   */
+
+#developer-name{
+    font-size: 1rem;
+    color: rgb(35, 57, 255);
+}
+
+@media (max-width: 490px) {
+    footer{
+        justify-content: center;
+        margin: 0;
+        row-gap: 20px;
+        column-gap: 10px;
+       
+    }
+    /* .section-p1{
+        padding:0;
+      } */
+      .footer-container{
+        padding:1em
+      }
+      .download-row{
+        display: flex;
+      }
+    .inside-maintainer{
+        font-size: 1em;
+    }
+    footer .copyright{
+        text-align:start;
+    }
+    footer .copyright p{
+        text-align: center;
+        margin-bottom: 0;
+        font-size: medium;
+    }
+    footer{
+    
+    }
 }

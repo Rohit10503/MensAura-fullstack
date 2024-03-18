@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route,Router, Routes } from 'react-router-dom';
@@ -15,6 +15,7 @@ import Visit from './pages/visit/visit';
 import Cart from './pages/cart';
 import Payment from './pages/payment';
 import Orders from './pages/orders';
+import Profile from './pages/profile';
 
 
 
@@ -35,6 +36,8 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/payment" element={<Payment/>}/>
         <Route path="/order" element={<Orders/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path="*" element={<Home/>}/>
         
 
 

@@ -52,8 +52,12 @@ a {
 }
 
 #product1{
+    margin: auto;
     text-align: center;
     margin-top: 0;
+}
+.product-display{
+    padding:2em;
 }
 
 #product1 h2{
@@ -85,7 +89,7 @@ a {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
     margin: 15px 0px;
     position: relative;
-    z-index: 500;
+    z-index: 2;
 }
 
 #product1 .pro:hover{
@@ -202,4 +206,74 @@ a {
 
 #banner button:hover{
     background-color: #088178;
+}
+
+
+@media (max-width:490px) {
+    #hero{
+        background-image: url("background.jpg");
+        background-position: 60%;
+      
+        height:fit-content;
+        padding: 2em;
+        margin: 0;
+        width: 100%;
+       
+    }
+    #hero h2{
+        font-size:1.6em;
+    }
+    #hero h1{
+        font-size: 1.2em;
+    }
+   #show{
+   
+    z-index: 2;
+   }
+   .item-img{
+    max-width: 100%;
+    max-height: 200px;
+    /* height: 20em; */
+    object-fit:contain;
+}
+
+.product-display{
+    padding: 2em 0;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    margin :auto;
+}
+#product1 .pro-container{
+   
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;
+    margin: 0;
+    width: 100%;
+
+}
+#product1 h2{
+    font-size: 2em;
+}
+
+#product1 .pro{
+    border-radius: 0;
+    margin: 1px ;
+    min-width: 10em;
+    /* background-color: #8df8f1; */
+}
+#product1 .pro :hover{
+ 
+    background-color: rgb(231, 238, 238);
+}
+
+#product1 .pro .des h5{
+    color:#626262;
+    font-size: 14px;
+}
+#product1 .pro .des h4{
+    font-size: 14px;
+}
+
 }

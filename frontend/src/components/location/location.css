@@ -1,0 +1,58 @@
+.loc-sec {
+    /* align-items: center; */
+    background-color:rgb(4 4 4 / 19%);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,210,233,1) 0%, rgba(47,242,222,1) 20%, rgba(78,121,218,0.6811099439775911) 29%, rgba(90,213,212,1) 54%, rgba(51,225,147,0.6951155462184874) 93%, rgba(0,224,255,1) 100%, rgba(242,31,31,0.5270483193277311) 100%); */
+    padding: 0.5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loc-sec p {
+    
+    margin-bottom: 0;
+}
+.loc-sec p i{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.alert-dialog{
+   background-color: rgb(187, 187, 187);
+    position: fixed;
+    z-index: 8;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    backdrop-filter: blur(129px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 1em;
+    
+   
+}
+
+.parent-div .alert-dialog{
+    border-radius: 1em;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+
+@media (max-width:490px) {
+    .alert-dialog{
+        padding:0.4em 4em;
+        width:100%;
+        min-height: 100px;
+    }
+   
+    .pin-input{
+        padding-bottom:0 ;
+        margin: 0;
+    }
+}

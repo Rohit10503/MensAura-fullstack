@@ -24,17 +24,16 @@ code {
 
 
 
-.section-p1{
-  padding: 40px 80px;
-}
 
 .section-m1{
   margin: 40px 0;
+
 }
 
 @media (max-width: 1100px) {
     
   #hero {
+      
       background-position: top 6% right 30%;
       height: 70vh;
   }
@@ -140,15 +139,13 @@ code {
 
 @media (max-width: 490px) {
 
-  .section-p1 {
-      padding: 20px;
-  }
-
+ 
   #header {
       padding: 10px 40px;
   }
 
   #hero {
+      
       height: 70vh;
       padding: 0 20px;
       background-position: top 30% right 40%;
@@ -162,6 +159,7 @@ code {
   #hero h1 {
       font-weight: 700;
       font-size: 34px;
+      
       color: #088178;
   }
 
@@ -194,6 +192,7 @@ code {
   /* single product  */
 
   #prodetails {
+    
       display: flex;
       margin-top: 20px;
       flex-direction: column;

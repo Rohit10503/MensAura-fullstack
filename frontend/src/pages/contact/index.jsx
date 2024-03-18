@@ -8,7 +8,7 @@ const Contact = () => {
                 <p>Don't worry! Contact Us.</p>
             </section>
 
-            <section id="contact-details" class="section-p1">
+            <section id="contact-details" class="section-p1 ">
                 <div class="details">
                     <span>GET IN TOUCH</span>
                     <h2>Visit one of our service center or contact us today</h2>

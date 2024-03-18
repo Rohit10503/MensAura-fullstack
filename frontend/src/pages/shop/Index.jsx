@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import "./shop.css"
 import { Link } from "react-router-dom";
 import { Base_URL } from "../../Services/Helper";
-const Shop = ()=>{
+const Shop = () => {
     const [state, setState] = useState([]);
 
     const getProduct = async () => {
@@ -23,16 +24,18 @@ const Shop = ()=>{
 
 
 
-    return<>
-    <section id="product1" class="section-p1">
-                <h2>Get Awesome T-shirt Here. </h2>
-                <h5 id="winter">In Affordable price</h5>
-                <div class="pro-container">
+    return <>
+        <section id="product1" class="shop-section-p1">
+            <h2>Get Awesome T-shirt Here. </h2>
+            <h5 class="winter1" id="winter">In Affordable price</h5>
+            <div class="pro-container">
 
-                    {
-                        state.map((item) => {
-                            return (<>
-                                <div class="pro" >
+                {
+                    state.map((item) => {
+                        return (<>
+                        <div className="pro">
+                            <Link to={"/visit/" + item._id}>
+                                <div  >
                                     <img src={item.img} alt="" />
                                     <div class="des">
                                         <span>{item.company}</span>
@@ -40,16 +43,17 @@ const Shop = ()=>{
                                         <h4>{item.price}</h4>
                                     </div>
                                     <div class="cart">
-                                    
-                                        <Link to={"/visit/" + item._id}><Button variant="primary" >visit</Button></Link>
+
                                     </div>
                                 </div>
-                            </>
-                            )
-                        })
-                    }
-                </div>
-            </section>
+                            </Link>
+                            </div>
+                        </>
+                        )
+                    })
+                }
+            </div>
+        </section>
 
 
 

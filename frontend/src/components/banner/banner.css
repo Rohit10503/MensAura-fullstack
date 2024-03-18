@@ -63,4 +63,28 @@ button.normal{
     outline: none;
     transition: 0.2s;
     height: 40px;
+
+
+
+}
+
+
+
+@media (max-width: 490px) {
+    
+    .section-m1{
+        padding: 29px;
+    }
+    #newsletter{
+        width:100%;
+    }
+    .section-p1{
+        padding: 40px 34px;
+        
+      }
+      .form-input{
+        min-width:8rem;
+    }
+ 
+
 }

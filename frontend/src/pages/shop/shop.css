@@ -1,0 +1,13 @@
+@media (max-width:490px) {
+    .shop-section-p1{
+        padding: 0;
+    }
+    #product1 h2{
+        font-size: 1.5em;
+    }
+ 
+.winter1{
+    font-size: 1.3em;
+   font-weight:700;
+}
+}

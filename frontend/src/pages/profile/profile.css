@@ -1,0 +1,14 @@
+.bread-crum{
+    margin: 1em 2em;
+}
+.profile-section{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+/* .card-center{
+    display: flex;
+    justify-content: center;
+} */
+
+
