@@ -5,10 +5,17 @@
     display: flex;
     justify-content: center;
     gap: 1em;
+    flex-wrap: wrap;
 }
-/* .card-center{
-    display: flex;
-    justify-content: center;
-} */
 
+@media (max-width:490px) {
+    .container {
+        margin: 1em 0em;
+        padding: 1em 0em;
+       
+    }
+    .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+        width: 90%;
+    }
+}
 

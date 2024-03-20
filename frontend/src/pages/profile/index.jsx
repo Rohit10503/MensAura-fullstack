@@ -47,7 +47,7 @@ const Profile = () => {
             </Card>
             </div>
 
-            <Leaflet/>
+            <Leaflet className="map"/>
         </div>
 
     </>
