@@ -36,11 +36,11 @@ const Home = () => {
         <div>
             <section id="hero">
                 <div id="show">
-                <h4>End of season sale</h4>
-                <h2>Super value deals</h2>
-                <h1>On all products</h1>
-                <p>save more with coupons<p> & up to 70% off!</p></p>
-                <button ><Link id="shop-now" to="/shop">Shop Now</Link></button>
+                    <h4>End of season sale</h4>
+                    <h2>Super value deals</h2>
+                    <h1>On all products</h1>
+                    <p>save more with coupons<p> & up to 70% off!</p></p>
+                    <button ><Link id="shop-now" to="/shop">Shop Now</Link></button>
                 </div>
             </section>
 
@@ -52,23 +52,33 @@ const Home = () => {
                 <div class="pro-container">
 
                     {
-                        state.slice(0, 8).map((item,index) => {
-                                
-                                
+                        state.slice(0, 8).map((item, index) => {
+                            let item_imgs=item.image_indices[0];        //object =>string
+                            item_imgs=item_imgs.slice(1,-1).split(", ")[1].slice(1,-1)
+                            
+                            let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
+                           
+                            
+                            
                             return (<>
-                            <div class="pro">
-                               <Link to={"/visit/" + item._id} > <div key={index}  >
-                                    <img  src={item.img} alt="" className="item-img" />
-                                    <div class="des">
-                                        <span>{item.company}</span>
-                                        <h5>{item.name}</h5>
-                                        <h4>₹ {item.price}</h4>
-                                    </div>
-                                    <div class="cart">
-                                    
-                                        
-                                    </div>
-                                </div></Link>
+                                
+                                <div class="pro">
+                                    <Link to={"/visit/" + item._id} > <div key={index}  >
+
+                                      
+                                       
+                                        <img src={`${imageUrl}`} alt="" className="item-img" />
+
+                                        <div class="des">
+                                            <span>{item.Brand}</span>
+                                            <h5>{item.Title}</h5>
+                                            <h4>₹ {item.Price}</h4>
+                                        </div>
+                                        <div class="cart">
+
+
+                                        </div>
+                                    </div></Link>
                                 </div>
                             </>
                             )

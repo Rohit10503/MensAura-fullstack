@@ -32,15 +32,20 @@ const Shop = () => {
 
                 {
                     state.map((item) => {
+                        let item_imgs=item.image_indices[0];        //object =>string
+                        item_imgs=item_imgs.slice(1,-1).split(", ")[1].slice(1,-1)
+                            
+                        let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
+                           
                         return (<>
                         <div className="pro">
                             <Link to={"/visit/" + item._id}>
                                 <div  >
-                                    <img src={item.img} alt="" />
+                                    <img src={`${imageUrl}`} alt="" />
                                     <div class="des">
-                                        <span>{item.company}</span>
-                                        <h5>{item.name}</h5>
-                                        <h4>{item.price}</h4>
+                                        <span>{item.Brand}</span>
+                                        <h5>{item.Title}</h5>
+                                        <h4>{item.Price}</h4>
                                     </div>
                                     <div class="cart">
 
