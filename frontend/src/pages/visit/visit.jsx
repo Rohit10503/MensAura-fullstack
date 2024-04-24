@@ -18,22 +18,34 @@ const Visit = () => {
         company: ""
     });
 
-    const [quantity, setQuantity] = useState([1]);
+    const [recommend, setRecommend] = useState([]);
 
 
     const params = useParams();
+    // const axios = require('axios');
 
     const getProductDetail = async () => {
         let result = await fetch(`${Base_URL}/visit/${params.id}`);
         result = await result.json();
+        let item_imgs = result.image_indices[0];        //object =>string
+        item_imgs = item_imgs.slice(1, -1).split(", ")[1].slice(1, -1)
+
+        let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`;
         setProduct({
-            name: result.name,
-            img: result.img,
-            price: result.price,
-            company: result.company
+            name: result.Title,
+            img: imageUrl,
+            price: result.Price,
+            company: result.Brand
         })
+        if (result.recommendedProducts) {
+            setRecommend(result.recommendedProducts)
+            
+
+
+        }
 
     }
+
 
     useEffect(() => {
         getProductDetail();
@@ -100,6 +112,7 @@ const Visit = () => {
 
                 <div class="single-pro-details">
                     <h6>Home / T-shirt</h6>
+                    <h>{product.company}</h>
                     <h4>{product.name}</h4>
                     <h2>₹ {product.price}</h2>
                     <select>
@@ -115,6 +128,46 @@ const Visit = () => {
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cumque eos enim esse saepe! Suscipit cumque quo error rem fugiat mollitia ipsum ex quae minus explicabo, itaque, dolor ipsa veniam. Fugit at recusandae nulla.</span>
                 </div>
             </section>
+
+            {/*------------------------------ Recommend section------------------------------------------------------------- */}
+            <section className="recommend">
+                <h4>Recommended for your best fit</h4>
+                <div className="pro-container-visit">
+                {
+                    recommend.map((item) => {
+                        let item_imgs=item.image_indices[0];        //object =>string
+                            item_imgs=item_imgs.slice(1,-1).split(", ")[1].slice(1,-1)
+                            
+                            let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
+                           
+                        return <>
+                            <div class="pro">
+                                <Link to = {`/visit/${item._id}`}> <div>
+
+
+
+                                    <img src={`${imageUrl}`} alt="" className="item-img" />
+
+                                    <div class="des">
+                                        <span>{item.Brand}</span>
+                                        <h5>{item.Title}</h5>
+                                        <h4>₹ {item.Price}</h4>
+                                    </div>
+                                    <div class="cart">
+
+
+                                    </div>
+                                </div></Link>
+                            </div>
+                        </>
+                    })
+
+
+                }
+                </div>
+            </section>
+
+
         </div>
     </>
 }
