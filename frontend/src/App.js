@@ -49,7 +49,7 @@ function App() {
         
       </Routes>
       
-     <Banner/>
+      <Banner/>
       <Footer/>
     </div>
   );
