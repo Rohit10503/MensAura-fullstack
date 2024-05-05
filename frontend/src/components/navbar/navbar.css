@@ -1,7 +1,5 @@
-
-
-#header{
-    background: rgb(2,0,36);
+#header {
+    background: rgb(2, 0, 36);
 
     display: flex;
     align-items: center;
@@ -15,21 +13,21 @@
     z-index: 1000;
 }
 
-#navbar{
-    
+#navbar {
+
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
 
-#navbar li{
+#navbar li {
     list-style: none;
     padding: 0 20px;
 
 }
 
-#navbar li a{
+#navbar li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -37,15 +35,15 @@
 }
 
 #navbar li a:hover,
-#navbar li a.active{
+#navbar li a.active {
     color: #088178;
 }
 
-#mobile{
+#mobile {
     display: none;
 }
 
-#close{
+#close {
     display: none;
 }
 
@@ -68,40 +66,42 @@
         transition: 0.4s
     }
 
-    #navbar.active{
+    #navbar.active {
         right: 0px;
-        
+
     }
 
-    #navbar li{
-        
+    #navbar li {
+
         width: 100%;
         margin: 0;
         padding-bottom: 1em;
         transition-duration: 0.3s;
 
     }
+
     #navbar li:hover {
         background-color: aliceblue;
     }
-    
-    
 
-    #mobile{
+
+
+    #mobile {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    #mobile i{
-        color: #1a1a1a;  
+    #mobile i {
+        color: #1a1a1a;
         font-size: 24px;
-        margin-left: 20px; 
+        margin-left: 20px;
         height: 20px;
         width: 20px;
-        
+
     }
-    #close{
+
+    #close {
         display: initial;
         position: absolute;
         top: 30px;
@@ -110,7 +110,7 @@
         font-size: 24px;
     }
 
-    #shp-bag{
+    #shp-bag {
         display: none;
     }
 }
@@ -120,7 +120,7 @@
 
 @media (max-width: 490px) {
     .section-p1 {
-        
+
         padding: 20px;
     }
 
@@ -128,7 +128,7 @@
         padding: 10px 40px;
     }
 
-    #bar{
+    #bar {
         position: relative;
         top: -4px;
     }
@@ -136,7 +136,7 @@
 }
 
 
-.loc-mark{
+.loc-mark {
     height: 50px;
     width: 25px;
 }

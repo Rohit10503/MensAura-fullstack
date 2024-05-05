@@ -39,7 +39,7 @@ const Visit = () => {
         })
         if (result.recommendedProducts) {
             setRecommend(result.recommendedProducts)
-            
+
 
 
         }
@@ -133,37 +133,33 @@ const Visit = () => {
             <section className="recommend">
                 <h4>Recommended for your best fit</h4>
                 <div className="pro-container-visit">
-                {
-                    recommend.map((item) => {
-                        let item_imgs=item.image_indices[0];        //object =>string
-                            item_imgs=item_imgs.slice(1,-1).split(", ")[1].slice(1,-1)
-                            
+                    {
+                        recommend.map((item) => {
+                            let item_imgs = item.image_indices[0];        //object =>string
+                            item_imgs = item_imgs.slice(1, -1).split(", ")[1].slice(1, -1)
+
                             let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
-                           
-                        return <>
-                            <div class="pro">
-                                <Link to = {`/visit/${item._id}`}> <div>
+
+                            return <>
+                                <div class="pro">
+                                    <Link to={`/visit/${item._id}`}> <div>
+                                        <img src={`${imageUrl}`} alt="" className="item-img" />
+                                        <div class="des">
+                                            <span>{item.Brand}</span>
+                                            <h5>{item.Title}</h5>
+                                            <h4>₹ {item.Price}</h4>
+                                        </div>
+                                        {/* <div class="cart">
 
 
-
-                                    <img src={`${imageUrl}`} alt="" className="item-img" />
-
-                                    <div class="des">
-                                        <span>{item.Brand}</span>
-                                        <h5>{item.Title}</h5>
-                                        <h4>₹ {item.Price}</h4>
-                                    </div>
-                                    <div class="cart">
+                                        </div> */}
+                                    </div></Link>
+                                </div>
+                            </>
+                        })
 
 
-                                    </div>
-                                </div></Link>
-                            </div>
-                        </>
-                    })
-
-
-                }
+                    }
                 </div>
             </section>
 
