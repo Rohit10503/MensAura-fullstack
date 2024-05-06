@@ -40,7 +40,7 @@ const Visit = () => {
         if (result.recommendedProducts) {
             setRecommend(result.recommendedProducts)
 
-
+            // navigate(`${Base_URL}/visit/${params.id}`)
 
         }
 
@@ -141,8 +141,8 @@ const Visit = () => {
                             let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
 
                             return <>
-                                <div class="pro"  key={item._id}>
-                                    <Link to={`/visit/${item._id}`}  onClick={()=>getProductDetail() }> <div>
+                                <div class="pro"  key={item._id} >
+                                    <Link to={`/visit/${item._id}`} preventScrollReset reloadDocument  relative="path" onClick={()=>getProductDetail() }> <div>
                                         <img src={`${imageUrl}`} alt="" className="item-img" />
                                         <div class="des">
                                             <span>{item.Brand}</span>
