@@ -7,17 +7,17 @@ import { Base_URL } from "../../Services/Helper";
 const Cart = () => {
     const auth = localStorage.getItem("user")
     const [state, setState] = useState([]);
-    const [sum,setSum]=useState(0);
+    const [sum, setSum] = useState(0);
     const navigate = useNavigate()
 
-    const deleteItem=async(user_id,prd_id)=>{
-        let result=await  fetch(`${Base_URL}/delete/${user_id}/${prd_id}`,{
-            method:"DELETE"
+    const deleteItem = async (user_id, prd_id) => {
+        let result = await fetch(`${Base_URL}/delete/${user_id}/${prd_id}`, {
+            method: "DELETE"
         });
-        if(result){
+        if (result) {
             collectCartData();
         }
-       
+
     }
 
     const collectCartData = async () => {
@@ -30,13 +30,13 @@ const Cart = () => {
 
         } else {
             setState(result)
-            const totalAmount = result.reduce((total, item) => total + parseInt(item.price), 0);
+            const totalAmount = result.reduce((total, item) => total + parseInt(item.Price), 0);
             setSum(totalAmount);
 
         }
     }
 
-    
+
 
 
 
@@ -62,22 +62,27 @@ const Cart = () => {
                     <tbody>
 
                         {state ? (
-                            
-                            state.map((item) => {
-                                
-                                return (
-                                    
-                                    
-                                    <><tr>
-                                        
-                                    
 
-                                    <td><img src={item.img} alt="" /></td>
-                                    <td>{item.name}</td>
-                                    <td>₹ {item.price}</td>
-                                    <td><input type="number" value="1" /></td>
-                                    <td><Button onClick={()=>{deleteItem(JSON.parse(auth)._id,item._id)}} variant="outline-secondary">Remove</Button></td>
-                                </tr></>);
+                            state.map((item) => {
+                                let item_imgs = item.image_indices[0];        //object =>string
+                                item_imgs = item_imgs.slice(1, -1).split(", ")[1].slice(1, -1)
+
+                                let imageUrl = `https://drive.google.com/thumbnail?id=${item_imgs}`; // Use the first image ID
+
+
+                                return (
+
+
+                                    <><tr>
+
+
+
+                                        <td><img src={imageUrl} alt="" /></td>
+                                        <td>{item.Title}</td>
+                                        <td>₹ {item.Price}</td>
+                                        <td><input type="number" value="1" /></td>
+                                        <td><Button onClick={() => { deleteItem(JSON.parse(auth)._id, item._id) }} variant="outline-secondary">Remove</Button></td>
+                                    </tr></>);
 
                             })
                         )

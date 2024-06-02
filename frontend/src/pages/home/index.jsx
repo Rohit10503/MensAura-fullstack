@@ -63,7 +63,7 @@ const Home = () => {
                             return (<>
                                 
                                 <div class="pro">
-                                    <Link to={"/visit/" + item._id} > <div key={index}  >
+                                    <Link to={"/visit/" + item._id} preventScrollReset reloadDocument > <div key={index}  >
 
                                       
                                        

@@ -10,7 +10,7 @@ const Payment = () => {
   const user_ka_id=JSON.parse(auth)._id;
   const [state, setState] = useState([]);
 
-  //CArt ka data colect ho raha hai on refresh of page
+  //Cart ka data colect ho raha hai on refresh of page
   const collectCartData = async () => {
     let userid = JSON.parse(auth)._id
     let result = await fetch(`${Base_URL}/cart-show/` + userid);
@@ -171,7 +171,7 @@ const Payment = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => { props.onHide(); handleClick(); }} >Close</Button>
+          <Button onClick={() => { props.onHide(); send_to_order() }} >Close</Button>
         </Modal.Footer>
       </Modal>
     );
